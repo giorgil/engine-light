@@ -8,8 +8,7 @@ class FoosController(ApplicationController):
   
   def show(self):
     """docstring for show"""
-    Greeting.get_by_id(2)
-    self.view['greeting'] = Greeting.get_by_id(2)
+    self.view['greeting'] = Greeting.get_by_id(int(self.request.params['id']))
     self.view['x'] = self.request.arguments()
     self.render_view('foos/show.html')
   
