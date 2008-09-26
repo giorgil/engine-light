@@ -6,4 +6,4 @@ class BarsController(ApplicationController):
   
   def show(self):
     """docstring for show"""
-    self.render()
+    self.render_view('bars/show.html')
