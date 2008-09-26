@@ -29,6 +29,7 @@ m.create_regs(controllers)
 
 class Router(webapp.RequestHandler):  
   def get(self):
+    m.environ = {'REQUEST_METHOD':'GET'}
     controller = m.match(self.request.path)
     __import__('app.controllers.' + controller['controller'] + '_controller')
     eval("app.controllers." + controller['controller'] +"_controller." + controller['controller'].capitalize() + "Controller(self.request, self.response)." + controller['action'] + '()')
