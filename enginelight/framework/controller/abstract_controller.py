@@ -33,4 +33,4 @@ class AbstractController():
     """
     pass
 
-template.register_template_library('framework.filters.url_filters')
+# template.register_template_library('framework.filters.url_filters')
