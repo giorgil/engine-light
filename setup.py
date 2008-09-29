@@ -18,7 +18,7 @@ setup(name='enginelight',
       keywords='google appengine',
       author='Trek Glowacki',
       author_email='trek.glowacki@gmail.com',
-      url='',
+      url='http://github.com/trek/engine-light',
       license='MIT',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
@@ -30,7 +30,8 @@ setup(name='enginelight',
                   ('enginelight/templates/application/+package+.egg-info', ['enginelight/templates/application/+package+.egg-info/paster_plugins.txt'])
                   ],
       install_requires=[
-          # -*- Extra requirements: -*-
+          'Cheetah',
+          'paste'
       ],
       entry_points="""
       [paste.paster_command]

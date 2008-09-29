@@ -2,7 +2,7 @@ Metadata-Version: 1.0
 Name: enginelight
 Version: 0.1dev
 Summary: a lightweight controller class for google app engine
-Home-page: UNKNOWN
+Home-page: http://github.com/trek/engine-light
 Author: Trek Glowacki
 Author-email: trek.glowacki@gmail.com
 License: MIT

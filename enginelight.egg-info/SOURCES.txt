@@ -9,6 +9,7 @@ enginelight.egg-info/dependency_links.txt
 enginelight.egg-info/entry_points.txt
 enginelight.egg-info/not-zip-safe
 enginelight.egg-info/paste_plugins.txt
+enginelight.egg-info/requires.txt
 enginelight.egg-info/top_level.txt
 enginelight/framework/__init__.py
 enginelight/framework/root.py
