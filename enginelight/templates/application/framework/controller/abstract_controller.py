@@ -5,11 +5,12 @@ from routes import util
 from google.appengine.ext.webapp import template
 
 class AbstractController():
-  def __init__(self, request, response):
+  def __init__(self, request, response, handler):
     """docstring for __init"""
-    self.request = request
+    self.request  = request
     self.response = response
-    self.view =  {}
+    self.hanler   = handler
+    self.view     = {}
     
   def render_view(self, file_name):
     """docstring for render"""
@@ -24,7 +25,9 @@ class AbstractController():
     
   def render_xml(self, xml):
     """docstring for render_xml"""
+    path = (os.path.join(APP_ROOT, ('app/views/' + file_name) ))
     self.response.headers['Content-Type'] = 'text/xml'
+    self.response.out.write(template.render(path, self.view))
 
   def _default_view(self):
     """Used interally to render a default view when render is called without any arguments so
@@ -33,4 +36,4 @@ class AbstractController():
     """
     pass
 
-template.register_template_library('framework.filters.url_filters')
+# template.register_template_library('framework.filters.url_filters')
