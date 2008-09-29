@@ -9,7 +9,7 @@ class AbstractController():
     """docstring for __init"""
     self.request  = request
     self.response = response
-    self.hanler   = handler
+    self.handler   = handler
     self.view     = {}
     
   def render_view(self, file_name):
@@ -35,5 +35,9 @@ class AbstractController():
        /app/views/foos/show.html
     """
     pass
+  
+  def redirect_to(self, url):
+    """Redirects to a specified url"""
+    self.handler.redirect(url)
 
 # template.register_template_library('framework.filters.url_filters')
