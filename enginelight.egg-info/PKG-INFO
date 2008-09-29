@@ -1,0 +1,16 @@
+Metadata-Version: 1.0
+Name: enginelight
+Version: 0.1dev
+Summary: a lightweight controller class for google app engine
+Home-page: UNKNOWN
+Author: Trek Glowacki
+Author-email: trek.glowacki@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: google appengine
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet

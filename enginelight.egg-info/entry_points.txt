@@ -1,0 +1,12 @@
+
+      [paste.paster_command]
+      controller = enginelight.commands:ControllerCommand
+      model = enginelight.commands:ModelCommand
+      resource = enginelight.commands:ResourceCommand
+      
+      [paste.global_paster_command]
+      
+        
+      [paste.paster_create_template]
+      enginelight = enginelight.template:FrameworkTemplate
+      
