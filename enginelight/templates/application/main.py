@@ -39,11 +39,19 @@ class Router(webapp.RequestHandler):
       self.request.GET[param] = value
     
     logging.error(controller)
+    logging.error(self.request.environ)
+    logging.error(self.request.GET)
     # import and instantiate the correct controller and call the action/method
     __import__('app.controllers.' + controller['controller'] + '_controller')
-    eval("app.controllers." + controller['controller'] +"_controller." + controller['controller'].capitalize() + "Controller(self.request, self.response)." + controller['action'] + '()')
+    eval("app.controllers." + controller['controller'] +"_controller." + controller['controller'].capitalize() + "Controller(self.request, self.response, self)." + controller['action'] + '()')
 
   def post(self):
+    if self.request.POST.has_key('_method'):
+      if self.request.POST['_method'] == 'put':
+       self.request.environ['REQUEST_METHOD'] = 'PUT'
+      elif self.request.POST['_method'] == 'delete':
+        self.request.environ['REQUEST_METHOD'] = 'DELETE'
+        
     self.route()
   
   def get(self):
